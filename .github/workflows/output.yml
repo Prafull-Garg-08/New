@@ -1,0 +1,10 @@
+name: Output Context Information
+on: workflow_dispatch
+jobs:
+    info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4.1.7
+            - name: output info
+              run: echo "${{toJson(github)}}"
