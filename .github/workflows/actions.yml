@@ -32,5 +32,11 @@ jobs:
              run: npm run build
            - name: deploy
              run: echo "Hello deploying.."
+      reuse:
+        uses: Prafull-Garg-08/reusable-workflow/.github/workflows/temp1.yaml
+        with:
+          config-path: .github/workflow/output.yaml
+        secrets:
+          personal_access_token: "hello World"
 
           
